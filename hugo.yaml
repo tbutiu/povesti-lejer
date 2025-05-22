@@ -1,0 +1,90 @@
+title: "Poveștile lui Grațian"
+baseURL: https://povesti.lejer.ro/
+languageCode: ro-RO
+defaultContentLanguage: ro
+theme: hugo-flex
+
+params:
+  showDate: false
+  color: teal # Orice culoare validă în CSS
+  width: 42rem # Orice dimensiune validă în CSS / lasă gol pentru a ocupa toată lățimea
+  divider: \2500\2500 # Orice șir / lasă gol pentru a nu afișa separator
+  footer: >-
+    Acesta este site-ul meu personal de povești scrise de un copil de 9 ani.  
+    Pentru detalii despre folosirea cookie-urilor și protecția datelor, vezi paginile:  
+    <a href="/cookies" style="color: teal; text-decoration: underline;">Politica de Cookies</a> și  
+    <a href="/gdpr" style="color: teal; text-decoration: underline;">Politica GDPR</a>.<br><br>
+    Toate textele sunt protejate prin  
+    <a href="http://creativecommons.org/licenses/by/4.0/" rel="license" style="color: teal; text-decoration: underline;">Licența Creative Commons Attribution 4.0</a>.
+  rss: Pentru a te abona la acest flux RSS, copiază adresa și insereaz-o în cititorul tău preferat.
+  favicon: false # Setează pe true pentru a adăuga un link către favicon.ico
+  noClasses: &nc false # Setează pe true pentru a folosi stiluri inline la evidențierea codului
+  katex: 0.16.11 # Versiunea KaTeX / lasă gol pentru cea mai nouă versiune
+  headingoffset: 0 # Schimbă nivelurile titlurilor când se redă markdown
+  linkicons: false # Setează pe hover sau true pentru a adăuga iconițe de link la titluri
+  summaries: false # Setează pe true pentru a afișa rezumate pe pagina principală
+  schema: true # Setează pe true pentru a adăuga metadate Schema.org
+  opengraph: true # Setează pe true pentru a adăuga metadate Open Graph
+  twittercards: false # Setează pe true pentru a adăuga metadate Twitter Cards
+  utterances:
+    repo: # Repo-ul Utterances pentru comentarii
+    issueterm: # Lasă gol pentru comportamentul implicit de mapare postare → issue
+    theme: # Lasă gol pentru tema adaptivă (dark/light)
+  netlify:
+    honeypot: false # Setează pe true pentru a adăuga un câmp "honeypot" în formularul de contact
+    recaptcha: false # Setează pe true pentru a adăuga recaptcha în formularul de contact
+  # css:                # Decomentează pentru a adăuga CSS personalizat din directorul assets
+  #   - css/foo.css
+  #   - bar.css
+  # js:                 # Decomentează pentru a adăuga JS personalizat din directorul assets
+  #   - js/foo.js
+  #   - bar.js
+
+markup:
+  highlight:
+    noClasses: *nc # Valoare sincronizată cu params.noClasses
+  goldmark:
+    extensions:
+      passthrough:
+        enable: false # Setează pe true pentru a reda matematică în LaTeX global
+        delimiters:
+          block:
+            - ['\[', '\]']
+            - ["$$", "$$"]
+          inline:
+            - ['\(', '\)']
+
+menu:
+  main:
+    - name: Despre
+      pageRef: /about
+      showdate: false
+      weight: 1
+    - name: Articole
+      pageRef: /posts
+      weight: 2
+    - name: Etichete
+      pageRef: /tags
+      weight: 3
+    - name: Categorii
+      pageRef: /categories
+      weight: 4
+    - name: RSS
+      pageRef: /
+      weight: 5
+      params:
+        format: rss
+
+outputFormats:
+  rss:
+    mediatype: application/rss+xml
+    baseName: feed # Redenumește URL-ul feed-ului RSS din rss.xml în feed.xml
+
+font/woff2:
+    suffixes:
+      - woff2
+
+module:
+  hugoVersion:
+    extended: false
+    min: 0.134.0
