@@ -1,5 +1,5 @@
 title: "Poveștile lui Grațian"
-baseURL: "https://povesti.lejer.ro"
+baseURL: "https://tbutiu.github.io/povesti-lejer/"
 languageCode: ro-RO
 defaultContentLanguage: ro
 theme: hugo-flex
