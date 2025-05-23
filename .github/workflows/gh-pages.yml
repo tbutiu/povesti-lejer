@@ -30,3 +30,4 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./public
           cname: povesti.lejer.ro
+          force_orphan: true
