@@ -8,3 +8,5 @@ showdate: false
 ---
 
 Acesta este un început temporar pentru povestea „Insula Misterioasă”. Curând va fi gata conținutul complet!
+
+Gratian a scris deja 2 capitole si lucreaza la al 3-lea.
