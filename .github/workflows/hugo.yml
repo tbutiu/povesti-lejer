@@ -31,35 +31,48 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.128.0
+      HUGO_VERSION: latest # Versiunea specifică de Hugo. Recomandat să o menții actualizată manual.
     steps:
-      - name: Install Hugo CLI
-        run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-      - name: Install Dart Sass
-        run: sudo snap install dart-sass
-      - name: Checkout
+      # Pasul 1: Clonează repository-ul
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: recursive # Asigură-te că submodules (teme Hugo) sunt clonate
+
+      # Pasul 2: Setează Hugo. Recomandat să folosești peaceiris/actions-hugo pentru simplitate.
+      # Această acțiune instalează Hugo și Dart Sass (dacă e necesar)
+      - name: Setup Hugo and Dart Sass
+        uses: peaceiris/actions-hugo@v3 # Folosim v3 pentru cea mai recentă versiune stabilă
+        with:
+          hugo-version: "${{ env.HUGO_VERSION }}" # Folosește versiunea definită în env
+          extended: true # Necesită extended pentru SASS/SCSS
+
+      # Pasul 3: Configurează mediul pentru GitHub Pages
+      # Această acțiune setează variabilele de mediu necesare pentru deploy-ul pe Pages.
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+
+      # Pasul 4: Instalează dependențe Node.js (dacă tema ta Hugo le folosește)
+      # Dacă tema ta nu folosește Node.js (ex: PostCSS, Tailwind), poți șterge acest pas.
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+
+      # Pasul 5: Construiește site-ul Hugo
+      # Aici este corecția cheie: NU mai suprascrie baseURL cu ${{ steps.pages.outputs.base_url }}.
+      # baseURL trebuie să fie setat corect în fișierul tău hugo.yaml.
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
         run: |
-          hugo \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+          hugo --minify # Hugo va folosi baseURL definit în hugo.yaml
+
+      # Pasul 6: Încarcă artefactul (site-ul construit)
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./public # Directorul unde Hugo construiește site-ul
 
   # Deployment job
   deploy:
@@ -67,8 +80,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: build # Acest job depinde de succesul job-ului 'build'
     steps:
+      # Pasul 7: Deploy la GitHub Pages
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v4 # Acțiunea oficială de deploy
