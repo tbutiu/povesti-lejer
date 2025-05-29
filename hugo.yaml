@@ -33,8 +33,8 @@ params:
   netlify:
     honeypot: false # Setează pe true pentru a adăuga un câmp "honeypot" în formularul de contact
     recaptcha: false # Setează pe true pentru a adăuga recaptcha în formularul de contact
-  # css:                # Decomentează pentru a adăuga CSS personalizat din directorul assets
-  #   - css/foo.css
+  css:                # Decomentează pentru a adăuga CSS personalizat din directorul assets
+    - css/custom.css
   #   - bar.css
   # js:                 # Decomentează pentru a adăuga JS personalizat din directorul assets
   #   - js/foo.js
@@ -44,6 +44,8 @@ markup:
   highlight:
     noClasses: *nc # Valoare sincronizată cu params.noClasses
   goldmark:
+    renderer:
+      unsafe: true
     extensions:
       passthrough:
         enable: false # Setează pe true pentru a reda matematică în LaTeX global

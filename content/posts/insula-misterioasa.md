@@ -43,6 +43,11 @@ Așa a început marea lor aventură...
 
 ## CAPITOLUL 2 : Naufragiul
 
+<img src="/media/insula-misterioasa/cap-2.jpeg"
+     width="500"
+     height="500"
+     style="display: block; margin: 0 auto 0px auto; border-radius: 50%; object-fit: cover; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.19);">
+
 Când valurile s-au liniștit și cerul și-a recăpătat albastrul, cei șase
 copii s-au trezit pe nisipul fin al unei insule necunoscute. Erau uzi,
 obosiți, dar teferi.
@@ -280,6 +285,11 @@ le-a făcut cu ochiul... și a dispărut într-o clipă.
 
 ## EPILOG
 
+<img src="/media/insula-misterioasa/epilog.jpeg"
+     width="600"
+     height="600"
+     style="display: block; margin: 0 auto 0px auto; border-radius: 10%; object-fit: cover; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.19);">
+
 Au trecut câteva luni de la întoarcerea copiilor acasă. Viața a revenit
 la normal: școală, teme, joacă în parc, prăjituri calde și povești
 înainte de culcare. Dar ceva era diferit. Ceva rămăsese în inimile lor.
@@ -304,6 +314,14 @@ uriașă\...
 
 --- Și eu am frunza asta care nu s-a uscat niciodată! zicea Mira.
 
+<img src="/media/insula-misterioasa/veverita.png"
+alt="Veverița Curioasă"
+title="Veveriță care explorează"
+width="250px"
+height="250px"
+style="float: right;  margin-left: 15px; margin-bottom: 0px;border-radius: 50%; object-fit: cover; 
+box-shadow: 0 6px 20px rgba(0, 0, 0, 0.19); ">
+
 Într-o zi, chiar pe pervazul ferestrei lui Andrei, a apărut\... o alună
 nouă. Uriașă. Strălucitoare. Iar lângă ea, un bilețel mic, scris cu
 litere rotunde:
@@ -315,4 +333,10 @@ Copiii s-au privit. Au zâmbit. Și au știut că, undeva, într-un colț de
 lume --- sau poate doar într-un colț de vis --- Insula Miraculoasă era
 încă acolo.
 
+---
+
 **Și că aventura nu se sfârșise\... încă.**
+
+---
+
+**Povestea o puteți descărca de aici:** [Descarcă Insula Misterioasă (PDF)](/pdfs/Insula-Misterioasa.pdf)

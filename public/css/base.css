@@ -190,3 +190,10 @@ kbd:has(kbd) {
 .u-noboosting {
   max-height: 1000000px;
 }
+.content a {
+  color: teal;
+  text-decoration: underline;
+}.content a {
+  color: teal;
+  text-decoration: underline;
+}

@@ -14,12 +14,9 @@ Scriu pentru că-mi place. Și pentru că uneori, când pun un cuvânt lângă a
 ## Ce poți citi aici:
 
 - Povești inventate (cu dragoni, roboți, sau un băiat cu o umbrelă zburătoare)
+- Povești culese de mine sau de prietenii mei
 - Jurnale scurte din viața mea de copil
 - Idei despre cum văd eu lumea
 - Și multe altele, pe care încă nu le-am scris 🙂
 
 ---
-
-📬 Dacă vrei să-mi scrii, poți să-i trimiți un mesaj mamei/tatălui la: [contact@lejer.ro](mailto:contact@lejer.ro)
-
-📘 Tot ce scriu e protejat prin licență [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), dar te rog să-mi spui dacă vrei să folosești ceva.
