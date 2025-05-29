@@ -1,4 +1,4 @@
-title: "Poveștile lui Grațian - Online"
+title: "Poveștile lui Grațian"
 baseURL: "https://povesti.lejer.ro/"
 languageCode: ro-RO
 defaultContentLanguage: ro
@@ -57,7 +57,7 @@ markup:
 menu:
   main:
     - name: Despre
-      pageRef: /about
+      pageRef: /
       showdate: false
       weight: 1
     - name: Articole
