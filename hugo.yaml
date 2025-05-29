@@ -1,4 +1,4 @@
-title: "Poveștile lui Grațian"
+title: "Povești culese de Grațian"
 baseURL: "https://povesti.lejer.ro/"
 languageCode: ro-RO
 defaultContentLanguage: ro
@@ -10,7 +10,7 @@ params:
   width: 42rem # Orice dimensiune validă în CSS / lasă gol pentru a ocupa toată lățimea
   divider: \2500\2500 # Orice șir / lasă gol pentru a nu afișa separator
   footer: >-
-    Acesta este site-ul meu personal de povești scrise de un copil de 9 ani.  
+    Acesta este site-ul meu personal de povești scrise și culese de un copil de 9 ani.  
     Pentru detalii despre folosirea cookie-urilor și protecția datelor, vezi paginile:  
     <a href="/cookies" style="color: teal; text-decoration: underline;">Politica de Cookies</a> și  
     <a href="/gdpr" style="color: teal; text-decoration: underline;">Politica GDPR</a>.<br><br>
@@ -60,7 +60,7 @@ menu:
       pageRef: /
       showdate: false
       weight: 1
-    - name: Articole
+    - name: Postări
       pageRef: /posts
       weight: 2
     - name: Etichete
